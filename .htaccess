@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php?/$1 [L]
+RewriteRule ^user/(.*)$ controllers/pages/user/index.php?page=$1
+RewriteRule ^adminweb/(.*)$ admin/controllers/pages/index.php?page=$1
+RewriteRule ^adminweb/(.*)$ admin/controllers/config/index.php?page=$1
+# RewriteRule ^daftar controllers/pages/daftar.php
+ErrorDocument 404 /404
+RewriteRule ^404/(.*)$ 404.html

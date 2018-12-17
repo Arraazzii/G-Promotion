@@ -1,0 +1,9 @@
+<?php 
+	session_start();
+	unset($_SESSION['admin']);
+	unset($_SESSION['user']);
+	unset($_SESSION['username']);
+	unset($_SESSION['kode_user']);
+	unset($_SESSION['nama']);
+	header('location:/');
+?>
